@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.victorouy</groupId>
+    <artifactId>application</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>jag</name>
+    
+    <developers>
+        <developer>
+            <name>Victor Ouy</name>
+        </developer>
+    </developers>
+    
+    <!-- Global settings for the project. Settings can be accessed in the pom
+    by placing the tag name in ${...} ex. ${mainClass} -->
+    <properties>
+        <mainClass>${project.groupId}.${project.artifactId}.MainApp</mainClass>
+        <skipTests>true</skipTests>
+    </properties>
+    
+    <dependencies>
+        <!-- MySQL dependency -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.21</version>
+        </dependency>
+        <!-- OpenFX Dependencies -->
+        <!-- You do not require all of these dependencies. 
+             Dependent on the components you use. -->        
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>16-ea+1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>16-ea+1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-web</artifactId>
+            <version>16-ea+1</version>
+        </dependency>
+<!--        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-media</artifactId>
+            <version>16-ea+1</version>
+        </dependency>-->
+        <!-- None of the samples combine Swing with JavaFX -->
+<!--        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-swing</artifactId>
+            <version>16-ea+1</version>
+        </dependency>-->
+        <!-- Here are the 3 versions of the graphics libraries for Win, Mac & Linux -->
+        <!-- Comment and uncomment depending on your OS, default is Windows -->
+<!--        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics </artifactId>
+            <version>16-ea+1</version>
+            <classifier>win</classifier>
+        </dependency>-->
+<!--        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics </artifactId>
+            <version>16-ea+1</version>
+            <classifier>linux</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics </artifactId>
+            <version>16-ea+1</version>
+            <classifier>mac</classifier>
+        </dependency>        -->
+        
+        <!-- MySQL dependency (optional) ususally declared in local pom--> 
+<!--        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.21</version>
+        </dependency>-->
+        
+        <!-- Jodd Mail Dependency -->
+        <dependency>
+            <groupId>org.jodd</groupId>
+            <artifactId>jodd-mail</artifactId>
+            <version>5.1.6</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.mail/javax.mail-api -->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>javax.mail-api</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/javax.activation/javax.activation-api -->
+        <dependency>
+            <groupId>javax.activation</groupId>
+            <artifactId>javax.activation-api</artifactId>
+            <version>1.2.0</version>
+        </dependency>
+        
+        <!-- The dependency for the SLF4J Facade -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.30</version>
+        </dependency>
+        <!-- Binding for Log4J -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.13.3</version>
+        </dependency>
+        <!-- Logging Framework Dependency Uses the log4j2 library -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.13.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.13.3</version>
+        </dependency>
+
+        <!--         JUnit 5 testing dependency -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.6.2</version>
+            <scope>test</scope>
+        </dependency>      
+        <!--         JUnit 5 supports JUnit 3 or 4 testing -->
+        <dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+            <version>5.6.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    
+<!--    <build>
+	<defaultGoal>clean test</defaultGoal>
+    </build>-->
+    
+
+    <build>
+        <!-- Goals may be set in the IDE or the pom IDE or CLI goals override 
+             the defaultGoal 
+        -->
+        <defaultGoal>clean test javafx:run</defaultGoal>
+        
+        <plugins>
+            <!-- We need to explicitly define this plugin so that we can
+                enable preview features in a maven build and if needed use a 
+                more up to date version than the version that Maven will
+                use implicitly.
+            -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <release>14</release>
+                    <compilerArgs>
+                        <args>--enable-preview</args>
+                    </compilerArgs>               
+                </configuration>
+            </plugin>
+            
+            <!-- This plugin is required to run JavaFX programs from Maven.
+                 It also looks with non-FX programs.
+            -->
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.4</version>
+                <executions>
+                    <execution>
+                        <id>default-cli</id>
+                        <configuration>
+                            <mainClass>${mainClass}</mainClass>
+                            <options>
+                                <option>--enable-preview</option> 
+                            </options>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>debug</id>
+                        <configuration>
+                            <options>
+                                <option>--enable-preview,-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</option>
+                            </options>
+                            <mainClass>${mainClass}</mainClass>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            
+            <!-- Executes JUnit tests and writes the results as an xml and
+                 txt file. Test classes must include one of the following in 
+                 their name: Test* *Test *TestCase (* is just a wildcard, 
+                 replace with the test class name)
+            -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+                
+                <configuration>
+<!--                    <argLine>-Dfile.encoding=UTF-8</argLine>-->
+                    <!-- Turn on tests: false, Turn off tests: true
+                         Better practice is to control testing in the IDE.
+                         If using NetBeans use Run Maven-Goals and set the 
+                         property skipTests to true or false 
+                    -->
+                    <skipTests>${skipTests}</skipTests>
+                    <argLine>--enable-preview -Dfile.encoding=${project.build.sourceEncoding}</argLine>
+                </configuration>
+            </plugin>
+            
+        </plugins>
+    </build>
+</project>

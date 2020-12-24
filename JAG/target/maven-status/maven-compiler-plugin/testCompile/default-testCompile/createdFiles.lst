@@ -1,0 +1,3 @@
+com\victorouy\test\TestEmailDAOImpl.class
+com\victorouy\test\TestMailSendingReceiving.class
+com\victorouy\testlogger\TestMethodLogger.class

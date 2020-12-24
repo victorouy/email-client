@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.victorouy.controller.AboutWebViewFXMLController">
+    <stylesheets>
+        <URL value="@/styles/aboutwebviewfxml.css" />
+    </stylesheets>
+   <children>
+      <WebView fx:id="aboutFXWebView" prefHeight="508.0" prefWidth="753.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Help</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1><u>Help for Java Application for Gmail</u></h1>
+        <div>
+            <h3>Mail Configurations:</h3>
+            <p>This button saves the configurations entered in the form. Every field must be valid and filled.</p>
+            <img src='helpImages/saveConfig.PNG'>
+            <br>
+            <p>This button cancels the program since you do not save the mail config to run the program.</p>
+            <img src='helpImages/cancelConfig.PNG'>
+        </div>
+        <br>
+        <hr>
+        <div>
+            <h3>Folders:</h3>
+            <p>Click a folder to open all the emails in that folder. Default(mandatory) folders are INBOX, SENT, and DRAFT</p>
+            <img src='helpImages/chooseFolder.PNG'>
+            <br>
+            <p>This button adds a folder to the application in which you can add emails into it</p>
+            <img src='helpImages/addFolder.PNG'>
+            <br>
+            <p>This button deletes an existing folder to the application, however you cannot delete one of the default folders(listed above). You can add emails into it</p>
+            <img src='helpImages/deleteFolder.PNG'>
+            <br>
+        </div>
+        <br>
+        <hr>
+        <div>
+            <h3>Email Table:</h3>
+            <img src='helpImages/emailTableButtons.PNG'>
+            <p>Reply button: reply to whom you received the email from</p>
+            <p>Reply All button: reply to all To and CC recipients</p>
+            <p>Forward button: forward the email to a user(s)</p>
+            <p>Delete button: deletes the email from the database</p>
+            <br>
+            <img src='helpImages/emailTableRefresh.PNG'>
+            <p>Refresh button: refreshes the emails in the folder the user is in. This is essentially useful in the INBOX folder since it receives emails from the actual server</p>
+        </div>
+        <br>
+        <hr>
+        <div>
+            <h3>Compose/Send/Save Email:</h3>
+            <p>This button creates a new email that the user can send or save to draft.</p>
+            <img src='helpImages/composeEmail.PNG'>
+            <p>This button sends an email given its recipients. Can only click send if composing a new email or a draft email</p>
+            <img src='helpImages/sendEmail.PNG'>
+            <br>
+            <p>This button saves an email and sends it to draft to be further edited. Can only click save as draft if composing a new email or a draft email</p>
+            <img src='helpImages/saveEmail.PNG'>
+            <p>NOTE: when adding multiple email addresses in one recipient field (I.e. "To"), you MUST separate them with a " "/blank space</p>
+            <p>NOTE: BCC recipients will be shows only if the email is saved as draft or if the user has been sent the email</p>
+        </div>
+        <br>
+        <hr>
+        <div>
+            <h3>Attachments:</h3>
+            <p>In the Mail menu bar, there are two attachment options:</p>
+            <p>Save Attachments: allows user to save the attachments in a selected email in a chosen directory on disk</p>
+            <p>Add Attachments: allows user to add a regular attachment in a composed or draft email</p>
+            <br>
+        </div>
+    </body>
+</html>

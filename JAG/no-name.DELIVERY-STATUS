@@ -1,0 +1,11 @@
+Reporting-MTA: dns; googlemail.com
+Received-From-MTA: dns; project.username01@gmail.com
+Arrival-Date: Thu, 19 Nov 2020 03:08:43 -0800 (PST)
+X-Original-Message-ID: <9885706.7.1605784123905@smtp.gmail.com>
+
+Final-Recipient: rfc822; iy@gmaca.com
+Action: failed
+Status: 4.4.1
+Diagnostic-Code: smtp; The recipient server did not accept our requests to connect. Learn more at https://support.google.com/mail/answer/7720 
+ [gmaca.com 3.223.115.185: timed out]
+Last-Attempt-Date: Sun, 22 Nov 2020 07:29:04 -0800 (PST)

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="emailFXTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="372.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.victorouy.controller.EmailTableFXMLController">
+   <center>
+      <TableView fx:id="emailDataTable" onDragDetected="#dragDetected" onMouseClicked="#clickedEmailRow" prefHeight="400.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="75.0" text="%id" />
+          <TableColumn fx:id="fromColumn" prefWidth="75.0" text="%from" />
+          <TableColumn fx:id="subjectColumn" prefWidth="75.0" text="%subject" />
+            <TableColumn fx:id="dateColumn" prefWidth="75.0" text="%date" />
+        </columns>
+      </TableView>
+   </center>
+   <top>
+      <AnchorPane prefHeight="45.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="replyButton" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#replyAction" prefHeight="25.0" prefWidth="62.0" text="%reply" />
+            <Button fx:id="replyAllButton" layoutX="84.0" layoutY="10.0" mnemonicParsing="false" onAction="#replyAllAction" prefHeight="25.0" prefWidth="106.0" text="%replyAll" />
+            <Button fx:id="forwardButton" layoutX="198.0" layoutY="10.0" mnemonicParsing="false" onAction="#forwardAction" prefHeight="25.0" prefWidth="77.0" text="%forward" />
+            <Button fx:id="delButton" layoutX="284.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteAction" prefHeight="25.0" prefWidth="52.0" text="%delete" />
+            <Button layoutX="606.0" layoutY="10.0" mnemonicParsing="false" onAction="#refreshAction" prefHeight="25.0" prefWidth="80.0" text="%refresh" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+   </top>
+</BorderPane>

@@ -1,0 +1,12 @@
+-- RUN ONCE
+
+DROP DATABASE IF EXISTS JAGDB;
+CREATE DATABASE JAGDB;
+
+USE JAGDB;
+
+DROP USER IF EXISTS victorouy@localhost;
+CREATE USER victorouy@'localhost' IDENTIFIED BY 'dawson';
+GRANT ALL ON JAGDB.* TO victorouy@'localhost';
+
+FLUSH PRIVILEGES;

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.victorouy.controller.RootEmailFXMLController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="%file">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#doChangeConfig" text="%changeConfig" />
+              <MenuItem mnemonicParsing="false" onAction="#doClose" text="%close" />
+               </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="%mail">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#doSaveAttachments" text="%saveAttach" />
+                  <MenuItem mnemonicParsing="false" onAction="#doAddAttachments" text="%addAttach" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="%help">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#doHelp" text="%help" />
+              <MenuItem mnemonicParsing="false" onAction="#doAbout" text="%about" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <SplitPane dividerPositions="0.25851703406813625" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+            <BorderPane fx:id="leftSplit" />
+            <BorderPane SplitPane.resizableWithParent="false">
+               <center>
+                  <SplitPane dividerPositions="0.40955137481910275" orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <items>
+                        <BorderPane fx:id="rightUpperSplit" />
+                        <BorderPane fx:id="rightLowerSplit" />
+                    </items>
+                  </SplitPane>
+               </center>
+            </BorderPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>
